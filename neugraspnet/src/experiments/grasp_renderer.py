@@ -268,7 +268,7 @@ def generate_neur_grasp_clouds(sim, render_settings, grasps, size, encoded_tsdf,
         
         if len(down_surf_pc.points) < render_settings['min_points']:
             # If less than min points, skip this grasp
-            print("[Warning]: Points are too few! Skipping this grasp...")
+            # print("[Warning]: Points are too few! Skipping this grasp...")
             bad_indices.append(ind)
         else:
             if len(down_surf_pc.points) > max_points:
@@ -492,7 +492,7 @@ def generate_gt_grasp_cloud(sim, render_settings, grasp, scene_mesh=None, debug=
     # If less than min points, skip this grasp
     if len(down_surface_pc.points) < render_settings['min_points']:
         # Points are too few! skip this grasp
-        print("[Warning]: Points are too few! Skipping this grasp...")
+        # print("[Warning]: Points are too few! Skipping this grasp...")
         # import pdb; pdb.set_trace()
         return False, 0, 0
     if debug:
